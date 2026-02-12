@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: hsl(185, 75%, 39%);
+  overflow: hidden; /* prevents background overflow */
+}
+
+/* Background patterns */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+body::before {
+  top: -40%;
+  left: -40%;
+  width: 70vmin;
+  height: 70vmin;
+  background-image: url("./profile-card-component-main/images/bg-pattern-top.svg");
+}
+
+body::after {
+  bottom: -40%;
+  right: -40%;
+  width: 70vmin;
+  height: 70vmin;
+  background-image: url("./profile-card-component-main/images/bg-pattern-bottom.svg");
+}
+
+/* Card */
+.card {
+  background-color: white;
+  width: 90%;
+  max-width: 23rem; 
+  height: 28rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Header */
+.header {
+  position: relative;
+  background-image: url("./profile-card-component-main/images/bg-pattern-card.svg");
+  background-size: cover;
+  background-position: center;
+  min-height: 11rem;
+  margin-bottom: 5rem;
+}
+
+.victor-image-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-48%, 35%);
+  border: 7px solid white;
+  border-radius: 5rem;
+}
+
+.victor-image{
+  border-radius: 5rem;
+}
+
+.first-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.victor {
+  color: hsl(229, 23%, 23%);
+}
+
+.number {
+  color: hsl(227, 10%, 46%);
+  font-size: 1.3rem;
+}
+
+.london {
+  text-align: center;
+  color: hsl(227, 10%, 46%);
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+}
+
+.first, .second, .third {
+  text-align: center;
+}
+
+.followers-number, .number-likes, .number-photos {
+  color: hsl(229, 23%, 23%);
+  font-size: 1.6rem;
+}
+
+.followers, .likes, .photos {
+  color: hsl(227, 10%, 46%);
+}
+
+@media screen and (min-width: 900px) {
+  body::before {
+  top: -50%;
+  left: -5%;
+  width: 100vmin;
+  height: 100vmin;
+}
+
+body::after {
+  bottom: -50%;
+  right: -5%;
+  width: 100vmin;
+  height: 100vmin;
+}
+}
